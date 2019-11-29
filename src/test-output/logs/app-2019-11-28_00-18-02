@@ -1,4 +1,0 @@
-2019-11-28 00:18:04,441 INFO actions.AssertActions verifyTrue [NOK] Error message text is incorrect 
-2019-11-28 00:18:07,155 ERROR pages.Page isElementPresent Proxy element for: DefaultElementLocator 'By.cssSelector: div.alert-warning' is not present 
-2019-11-28 00:18:07,156 INFO actions.AssertActions verifyTrue [NOK] Login failed msg not displayed 
-2019-11-28 00:18:07,901 INFO actions.AssertActions verifyTrue [NOK] The style of error message is incorrect 

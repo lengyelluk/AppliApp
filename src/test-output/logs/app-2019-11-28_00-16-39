@@ -1,3 +1,0 @@
-2019-11-28 00:16:41,511 INFO actions.AssertActions verifyTrue [NOK] Error message text is incorrect 
-2019-11-28 00:16:44,406 INFO actions.AssertActions verifyTrue [NOK] Login failed msg not displayed 
-2019-11-28 00:16:45,163 INFO actions.AssertActions verifyTrue [NOK] The style of error message is incorrect 

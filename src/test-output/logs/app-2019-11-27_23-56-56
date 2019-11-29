@@ -1,3 +1,0 @@
-2019-11-27 23:56:57,764 INFO actions.AssertActions verifyTrue [NOK] Login form header text incorrect 
-2019-11-27 23:56:57,840 INFO actions.AssertActions verifyTrue [NOK] Password label incorrect 
-2019-11-27 23:57:00,020 INFO actions.AssertActions verifyTrue [NOK] Male icon is not present 
