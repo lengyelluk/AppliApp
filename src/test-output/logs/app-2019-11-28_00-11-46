@@ -1,0 +1,10 @@
+2019-11-28 00:11:47,643 INFO actions.AssertActions verifyTrue [NOK] Login form header text incorrect 
+2019-11-28 00:11:47,712 INFO actions.AssertActions verifyTrue [NOK] Password label incorrect 
+2019-11-28 00:11:49,903 INFO actions.AssertActions verifyTrue [NOK] Male icon is not present 
+2019-11-28 00:11:54,204 INFO actions.AssertActions verifyTrue [NOK] Fingerprint icon is not present 
+2019-11-28 00:11:54,364 INFO actions.AssertActions verifyTrue [NOK] The style attribute of Remember me checkbox should be empty 
+2019-11-28 00:11:56,646 INFO actions.AssertActions verifyTrue [NOK] LinkedIn icon is not present 
+2019-11-28 00:11:58,094 INFO actions.AssertActions verifyTrue [NOK] Error message text is incorrect 
+2019-11-28 00:12:09,829 INFO actions.AssertActions verifyTrue [NOK] Displayed chart data for 2018 does not match with expecting values 
+2019-11-28 00:12:12,905 INFO actions.AssertActions verifyTrue [NOK] Number of adds is the same as expected 
+2019-11-28 00:12:12,906 INFO pages.AppliAppWithAddsPage checkAdds New add added to the page: https://demo.applitools.com/img/flaseSale3.gif 

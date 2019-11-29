@@ -1,0 +1,210 @@
+2019-11-29 00:36:42,385 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:36:42,392 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:36:42,393 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2019-11-29 00:36:42,400 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:42,401 DEBUG execchain.MainClientExec execute Opening connection {s}->https://eyesapi.applitools.com:443 
+2019-11-29 00:36:42,461 DEBUG conn.DefaultHttpClientConnectionOperator connect Connecting to eyesapi.applitools.com/13.86.255.34:443 
+2019-11-29 00:36:42,461 DEBUG ssl.SSLConnectionSocketFactory connectSocket Connecting socket to eyesapi.applitools.com/13.86.255.34:443 with timeout 300000 
+2019-11-29 00:36:42,765 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2019-11-29 00:36:42,765 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] 
+2019-11-29 00:36:42,766 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Starting handshake 
+2019-11-29 00:36:43,246 DEBUG ssl.SSLConnectionSocketFactory verifyHostname Secure session established 
+2019-11-29 00:36:43,247 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated protocol: TLSv1.2 
+2019-11-29 00:36:43,249 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+2019-11-29 00:36:43,250 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer principal: CN=*.applitools.com, O=Applitools Inc., L=san mateo, ST=California, C=US 
+2019-11-29 00:36:43,251 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer alternative names: [*.applitools.com, applitools.com] 
+2019-11-29 00:36:43,253 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  issuer principal: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US 
+2019-11-29 00:36:43,260 DEBUG conn.DefaultHttpClientConnectionOperator connect Connection established 192.168.1.196:50450<->13.86.255.34:443 
+2019-11-29 00:36:43,262 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:36:43,263 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:36:43,265 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:36:43,873 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:36:43,895 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:36:43,896 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:47,361 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:36:47,361 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:36:47,362 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2019-11-29 00:36:47,362 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 1][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:47,362 DEBUG execchain.MainClientExec execute Opening connection {s}->https://eyesapi.applitools.com:443 
+2019-11-29 00:36:47,362 DEBUG conn.DefaultHttpClientConnectionOperator connect Connecting to eyesapi.applitools.com/13.86.255.34:443 
+2019-11-29 00:36:47,363 DEBUG ssl.SSLConnectionSocketFactory connectSocket Connecting socket to eyesapi.applitools.com/13.86.255.34:443 with timeout 300000 
+2019-11-29 00:36:47,646 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2019-11-29 00:36:47,649 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] 
+2019-11-29 00:36:47,651 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Starting handshake 
+2019-11-29 00:36:48,127 DEBUG ssl.SSLConnectionSocketFactory verifyHostname Secure session established 
+2019-11-29 00:36:48,129 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated protocol: TLSv1.2 
+2019-11-29 00:36:48,131 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+2019-11-29 00:36:48,132 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer principal: CN=*.applitools.com, O=Applitools Inc., L=san mateo, ST=California, C=US 
+2019-11-29 00:36:48,134 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer alternative names: [*.applitools.com, applitools.com] 
+2019-11-29 00:36:48,135 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  issuer principal: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US 
+2019-11-29 00:36:48,137 DEBUG conn.DefaultHttpClientConnectionOperator connect Connection established 192.168.1.196:50508<->13.86.255.34:443 
+2019-11-29 00:36:48,139 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/data?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:36:48,140 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:36:48,141 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:36:49,090 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:36:49,091 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 1][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:36:49,092 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 1][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:49,228 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:36:49,228 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:36:49,228 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:49,230 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:49,230 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/MDAwMDAyNTE4MjczMTY1OTY0ODM~;MDAwMDAyNTE4MjczMTY1OTYzNTg~?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:36:49,230 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:36:49,230 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:36:50,286 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:36:50,292 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:36:50,293 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:53,197 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:36:53,198 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:36:53,198 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2019-11-29 00:36:53,198 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 2][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:53,199 DEBUG execchain.MainClientExec execute Opening connection {s}->https://eyesapi.applitools.com:443 
+2019-11-29 00:36:53,199 DEBUG conn.DefaultHttpClientConnectionOperator connect Connecting to eyesapi.applitools.com/13.86.255.34:443 
+2019-11-29 00:36:53,199 DEBUG ssl.SSLConnectionSocketFactory connectSocket Connecting socket to eyesapi.applitools.com/13.86.255.34:443 with timeout 300000 
+2019-11-29 00:36:53,372 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2019-11-29 00:36:53,374 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] 
+2019-11-29 00:36:53,375 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Starting handshake 
+2019-11-29 00:36:53,907 DEBUG ssl.SSLConnectionSocketFactory verifyHostname Secure session established 
+2019-11-29 00:36:53,910 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated protocol: TLSv1.2 
+2019-11-29 00:36:53,912 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+2019-11-29 00:36:53,916 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer principal: CN=*.applitools.com, O=Applitools Inc., L=san mateo, ST=California, C=US 
+2019-11-29 00:36:53,918 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer alternative names: [*.applitools.com, applitools.com] 
+2019-11-29 00:36:53,922 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  issuer principal: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US 
+2019-11-29 00:36:53,925 DEBUG conn.DefaultHttpClientConnectionOperator connect Connection established 192.168.1.196:50562<->13.86.255.34:443 
+2019-11-29 00:36:53,927 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/data?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:36:53,928 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:36:53,929 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:36:54,760 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:36:54,762 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 2][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:36:54,763 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 2][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:54,889 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:36:54,889 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:36:54,889 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:54,891 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:54,891 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/MDAwMDAyNTE4MjczMTY1OTY0ODM~;MDAwMDAyNTE4MjczMTY1OTYzNTg~?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:36:54,891 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:36:54,891 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:36:55,429 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:36:55,434 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:36:55,436 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:58,645 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:36:58,646 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:36:58,646 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2019-11-29 00:36:58,647 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 3][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:36:58,647 DEBUG execchain.MainClientExec execute Opening connection {s}->https://eyesapi.applitools.com:443 
+2019-11-29 00:36:58,647 DEBUG conn.DefaultHttpClientConnectionOperator connect Connecting to eyesapi.applitools.com/13.86.255.34:443 
+2019-11-29 00:36:58,647 DEBUG ssl.SSLConnectionSocketFactory connectSocket Connecting socket to eyesapi.applitools.com/13.86.255.34:443 with timeout 300000 
+2019-11-29 00:36:58,913 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2019-11-29 00:36:58,914 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] 
+2019-11-29 00:36:58,914 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Starting handshake 
+2019-11-29 00:36:59,325 DEBUG ssl.SSLConnectionSocketFactory verifyHostname Secure session established 
+2019-11-29 00:36:59,326 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated protocol: TLSv1.2 
+2019-11-29 00:36:59,327 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+2019-11-29 00:36:59,328 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer principal: CN=*.applitools.com, O=Applitools Inc., L=san mateo, ST=California, C=US 
+2019-11-29 00:36:59,329 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer alternative names: [*.applitools.com, applitools.com] 
+2019-11-29 00:36:59,330 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  issuer principal: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US 
+2019-11-29 00:36:59,331 DEBUG conn.DefaultHttpClientConnectionOperator connect Connection established 192.168.1.196:50604<->13.86.255.34:443 
+2019-11-29 00:36:59,334 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/data?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:36:59,335 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:36:59,338 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:00,255 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:00,256 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 3][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:00,257 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 3][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:00,389 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:37:00,391 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:37:00,391 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:00,393 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:00,393 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/MDAwMDAyNTE4MjczMTY1OTY0ODM~;MDAwMDAyNTE4MjczMTY1OTYzNTg~?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:37:00,393 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:37:00,393 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:01,432 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:01,437 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:01,438 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:04,857 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager is shutting down 
+2019-11-29 00:37:04,866 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager shut down 
+2019-11-29 00:37:04,904 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager is shutting down 
+2019-11-29 00:37:04,904 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager shut down 
+2019-11-29 00:37:04,993 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:37:04,993 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:37:04,995 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2019-11-29 00:37:04,996 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 4][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:04,997 DEBUG execchain.MainClientExec execute Opening connection {s}->https://eyesapi.applitools.com:443 
+2019-11-29 00:37:04,997 DEBUG conn.DefaultHttpClientConnectionOperator connect Connecting to eyesapi.applitools.com/13.86.255.34:443 
+2019-11-29 00:37:04,998 DEBUG ssl.SSLConnectionSocketFactory connectSocket Connecting socket to eyesapi.applitools.com/13.86.255.34:443 with timeout 300000 
+2019-11-29 00:37:05,273 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2019-11-29 00:37:05,274 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] 
+2019-11-29 00:37:05,275 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Starting handshake 
+2019-11-29 00:37:05,825 DEBUG ssl.SSLConnectionSocketFactory verifyHostname Secure session established 
+2019-11-29 00:37:05,826 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated protocol: TLSv1.2 
+2019-11-29 00:37:05,828 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+2019-11-29 00:37:05,829 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer principal: CN=*.applitools.com, O=Applitools Inc., L=san mateo, ST=California, C=US 
+2019-11-29 00:37:05,831 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer alternative names: [*.applitools.com, applitools.com] 
+2019-11-29 00:37:05,834 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  issuer principal: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US 
+2019-11-29 00:37:05,837 DEBUG conn.DefaultHttpClientConnectionOperator connect Connection established 192.168.1.196:50658<->13.86.255.34:443 
+2019-11-29 00:37:05,838 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/data?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:37:05,839 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:37:05,839 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:06,739 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:06,740 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 4][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:06,741 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 4][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:06,889 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:37:06,889 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:37:06,889 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:06,891 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:06,891 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/MDAwMDAyNTE4MjczMTY1OTY0ODM~;MDAwMDAyNTE4MjczMTY1OTYzNTg~?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:37:06,891 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:37:06,891 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:07,720 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:07,725 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:07,727 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:12,020 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:37:12,021 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:37:12,024 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20] 
+2019-11-29 00:37:12,024 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 5][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:12,025 DEBUG execchain.MainClientExec execute Opening connection {s}->https://eyesapi.applitools.com:443 
+2019-11-29 00:37:12,028 DEBUG conn.DefaultHttpClientConnectionOperator connect Connecting to eyesapi.applitools.com/13.86.255.34:443 
+2019-11-29 00:37:12,030 DEBUG ssl.SSLConnectionSocketFactory connectSocket Connecting socket to eyesapi.applitools.com/13.86.255.34:443 with timeout 300000 
+2019-11-29 00:37:12,223 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled protocols: [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2019-11-29 00:37:12,225 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Enabled cipher suites:[TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] 
+2019-11-29 00:37:12,226 DEBUG ssl.SSLConnectionSocketFactory createLayeredSocket Starting handshake 
+2019-11-29 00:37:12,735 DEBUG ssl.SSLConnectionSocketFactory verifyHostname Secure session established 
+2019-11-29 00:37:12,736 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated protocol: TLSv1.2 
+2019-11-29 00:37:12,737 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 
+2019-11-29 00:37:12,739 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer principal: CN=*.applitools.com, O=Applitools Inc., L=san mateo, ST=California, C=US 
+2019-11-29 00:37:12,740 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  peer alternative names: [*.applitools.com, applitools.com] 
+2019-11-29 00:37:12,741 DEBUG ssl.SSLConnectionSocketFactory verifyHostname  issuer principal: CN=DigiCert SHA2 Secure Server CA, O=DigiCert Inc, C=US 
+2019-11-29 00:37:12,743 DEBUG conn.DefaultHttpClientConnectionOperator connect Connection established 192.168.1.196:50720<->13.86.255.34:443 
+2019-11-29 00:37:12,746 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/data?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:37:12,747 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:37:12,748 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:13,600 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:13,602 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 5][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:13,605 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 5][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:14,147 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:37:14,147 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:37:14,148 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:14,149 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:14,150 DEBUG execchain.MainClientExec execute Executing request POST /api/sessions/running/MDAwMDAyNTE4MjczMTY1OTY0ODM~;MDAwMDAyNTE4MjczMTY1OTYzNTg~?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110 HTTP/1.1 
+2019-11-29 00:37:14,150 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:37:14,151 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:15,397 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:15,400 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:15,401 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:15,699 DEBUG protocol.RequestAddCookies process CookieSpec selected: default 
+2019-11-29 00:37:15,701 DEBUG protocol.RequestAuthCache process Auth cache not set in the context 
+2019-11-29 00:37:15,703 DEBUG conn.PoolingHttpClientConnectionManager requestConnection Connection request: [route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:15,704 DEBUG conn.PoolingHttpClientConnectionManager leaseConnection Connection leased: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:15,705 DEBUG execchain.MainClientExec execute Executing request DELETE /api/sessions/running/MDAwMDAyNTE4MjczMTY1OTY0ODM~;MDAwMDAyNTE4MjczMTY1OTYzNTg~?apiKey=xI1AO102yxfcIUR4u698D9ov26BPHbbqb7PHdHss4NCFSY110&aborted=false&updateBaseline=false HTTP/1.1 
+2019-11-29 00:37:15,706 DEBUG execchain.MainClientExec execute Target auth state: UNCHALLENGED 
+2019-11-29 00:37:15,709 DEBUG execchain.MainClientExec execute Proxy auth state: UNCHALLENGED 
+2019-11-29 00:37:16,379 DEBUG execchain.MainClientExec execute Connection can be kept alive indefinitely 
+2019-11-29 00:37:16,386 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection [id: 0][route: {s}->https://eyesapi.applitools.com:443] can be kept alive indefinitely 
+2019-11-29 00:37:16,388 DEBUG conn.PoolingHttpClientConnectionManager releaseConnection Connection released: [id: 0][route: {s}->https://eyesapi.applitools.com:443][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20] 
+2019-11-29 00:37:16,434 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager is shutting down 
+2019-11-29 00:37:16,436 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager shut down 
+2019-11-29 00:37:16,439 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager is shutting down 
+2019-11-29 00:37:16,441 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager shut down 
+2019-11-29 00:37:16,444 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager is shutting down 
+2019-11-29 00:37:16,445 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager shut down 
+2019-11-29 00:37:16,447 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager is shutting down 
+2019-11-29 00:37:16,448 DEBUG conn.PoolingHttpClientConnectionManager shutdown Connection manager shut down 

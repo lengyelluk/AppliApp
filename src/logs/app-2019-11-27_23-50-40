@@ -1,0 +1,4 @@
+2019-11-27 23:50:45,323 INFO actions.AssertActions verifyTrue Verify for True: Current:true 
+2019-11-27 23:50:45,326 INFO actions.AssertActions verifyTrue Verify for True: Current:false 
+2019-11-27 23:50:45,329 INFO actions.AssertActions verifyTrue [NOK] Displayed chart data for 2018 does not match with expecting values 
+2019-11-27 23:50:45,453 INFO actions.AssertActions checkForVerificationErrors Checking for VerificationErrors 

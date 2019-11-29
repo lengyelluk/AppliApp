@@ -1,0 +1,2 @@
+2019-11-28 23:11:56,253 INFO actions.AssertActions verifyTrue [NOK] Login form header text incorrect 
+2019-11-28 23:11:56,372 INFO actions.AssertActions verifyTrue [NOK] Password label incorrect 
