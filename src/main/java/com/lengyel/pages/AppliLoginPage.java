@@ -72,6 +72,7 @@ public class AppliLoginPage extends Page {
 
 
     public void checkInitialLoginPage() {
+        logger.error("Login Page UI Elements");
         checkHeader();
         checkLabels();
         checkIconsPresent();
@@ -92,16 +93,28 @@ public class AppliLoginPage extends Page {
     }
 
     public void loginInvalid(String username, String password) {
+        String testType = "";
+        if (username.isBlank() && password.isBlank()) {
+            testType = "noNameNoPwd";
+            logger.error("Data-driven test - input: no username and no password");
+        }
+        else if (username.isBlank()) {
+            testType = "noName";
+            logger.error("Data-driven test - input: no username");
+        }
+        else {
+            testType = "noPwd";
+            logger.error("Data-driven test - input: no password");
+        }
+
         usernameTextField.sendKeys(username);
         passwordTextField.sendKeys(password);
 
         driverWait().until(ExpectedConditions.visibilityOf(loginButton));
         loginButton.click();
 
-
-
         boolean loginFailedMsgDisplayed = isElementPresent(loginFailedMsg);
-        assertActions().verifyTrue(loginFailedMsgDisplayed, "Login failed msg not displayed");
+        assertActions().verifyTrue(loginFailedMsgDisplayed, "Login failed msg is displayed");
 
         if(loginFailedMsgDisplayed) {
             final String LOGIN_FAILED_MSG = "Please enter both username and password";
@@ -110,17 +123,17 @@ public class AppliLoginPage extends Page {
 
             String msgText = loginFailedMsg.getText().trim();
 
-            if (username.isBlank() && password.isBlank())
-                assertActions().verifyEquals(msgText, LOGIN_FAILED_MSG, "Error message text is incorrect");
-            else if (username.isBlank())
-                assertActions().verifyEquals(msgText, USERNAME_MISSING_MSG, "Error message when username is missing is incorrect");
+            if (testType.equals("noNameNoPwd"))
+                assertActions().verifyEquals(msgText, LOGIN_FAILED_MSG, "Error message text when username and password are missing");
+            else if (testType.equals("noName"))
+                assertActions().verifyEquals(msgText, USERNAME_MISSING_MSG, "Error message when username is missing");
             else
-                assertActions().verifyEquals(msgText, PASSWORD_MISSING_MSG, "Error message when password is missing is incorrect");
+                assertActions().verifyEquals(msgText, PASSWORD_MISSING_MSG, "Error message when password is missing");
 
             //based on V2 => invalid style of error msg
             final String ERROR_MSG_STYLE = "display: block;";
             String errorMsgStyleCaptured = loginFailedMsg.getAttribute("style");
-            assertActions() .verifyTrue(errorMsgStyleCaptured.equals(ERROR_MSG_STYLE), "The style of error message is incorrect");
+            assertActions() .verifyTrue(errorMsgStyleCaptured.equals(ERROR_MSG_STYLE), "The style of error message is correct");
         }
     }
 
@@ -195,14 +208,14 @@ public class AppliLoginPage extends Page {
         assertActions().verifyEquals(labelTextCaptured, REMEMBER_ME_TEXT,
                 "Remember me label text incorrect.");
         //based on V2 to check the offset of Remember me text form the checkbox
-        assertActions().verifyTrue(StringUtils.isBlank(labelTextStyle), "The style attribute of Remember me checkbox should be empty.");
+        assertActions().verifyTrue(StringUtils.isBlank(labelTextStyle), "The style attribute of Remember me checkbox is empty.");
     }
 
     public void checkSocialIconsPresent() {
         logger.info("Checking social icons in Login form");
-        assertActions().verifyTrue(isElementPresent(facebookIcon), "Facebook icon is not present");
-        assertActions().verifyTrue(isElementPresent(twitterIcon), "Twitter icon is not present");
-        assertActions().verifyTrue(isElementPresent(linkedinIcon), "LinkedIn icon is not present");
+        assertActions().verifyTrue(isElementPresent(facebookIcon), "Facebook icon is present");
+        assertActions().verifyTrue(isElementPresent(twitterIcon), "Twitter icon is present");
+        assertActions().verifyTrue(isElementPresent(linkedinIcon), "LinkedIn icon is present");
     }
 
     public void checkIconsPresent() {

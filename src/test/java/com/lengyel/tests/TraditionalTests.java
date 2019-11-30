@@ -36,7 +36,7 @@ public class TraditionalTests {
         AssertActions.checkForVerificationErrors();
     }
 
-    //2 data-driver test
+    //2 data-driven test
     @Test(priority = 2)
     public void dataDrivenTest () {
         appliLoginPage = new AppliLoginPage(driver);

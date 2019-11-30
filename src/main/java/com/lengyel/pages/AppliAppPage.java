@@ -81,6 +81,7 @@ public class AppliAppPage extends Page {
     }
 
     public void checkSorting() {
+        logger.error("Table sort test");
         Map<Double, List<String>> unsortedTable = getRows();
 
         TreeMap<Double, List<String>> checkTable = new TreeMap<>();

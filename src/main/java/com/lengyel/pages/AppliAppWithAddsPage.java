@@ -42,6 +42,8 @@ public class AppliAppWithAddsPage extends Page {
 
     //only valid for App page with Adds
     public void checkAdds(int numOfAddsToBeFound) {
+        logger.error("Dynamic content test");
+
         List<String> addsImagesFound = findAddsImages();
         int numOfAddsFound = addsImagesFound.size();
 

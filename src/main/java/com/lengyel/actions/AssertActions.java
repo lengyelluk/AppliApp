@@ -157,7 +157,7 @@ public class AssertActions {
                 checkPoints.add("[OK] " + message);
             } else {
                 checkPoints.add("[NOK] " + message);
-                logger.error("[ERROR] " + message);
+                logger.error("[ERROR] " + message + ". Expected: true. Actual: false");
             }
             verifications.assertTrue(checkCondition, message + "\n");
         } catch (Error e) {

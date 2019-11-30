@@ -47,6 +47,7 @@ public class AppliChartPage extends Page {
 
     //silly one, should be done by automating canvas
     public void checkChartData2017_2018() {
+        logger.error("Canvas chart test");
         waitForPageLoaded();
         Map<String, Integer> map_data_2017 = new HashMap<>();
         Map<String, Integer> map_data_2018 = new HashMap<>();
