@@ -61,7 +61,7 @@ public class AppliLoginPage extends Page {
     WebElement fingerprintIcon;
 
     public AppliLoginPage(WebDriver driver) {
-        super("AppliLoginPage", "https://demo.applitools.com/hackathon.html", driver);
+        super("AppliLoginPage", "https://demo.applitools.com/hackathonV2.html", driver);
         PageFactory.initElements(driver, this);
         driver().get(url());
 

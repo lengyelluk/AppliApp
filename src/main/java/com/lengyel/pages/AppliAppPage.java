@@ -35,7 +35,7 @@ public class AppliAppPage extends Page {
     By amountValues = By.xpath("//tr/td[contains(@class, 'text-right')]/span");
 
     public AppliAppPage(WebDriver driver) {
-        super("AppliAppPage", "https://demo.applitools.com/hackathonApp.html", driver);
+        super("AppliAppPage", "https://demo.applitools.com/hackathonAppV2.html", driver);
 
         PageFactory.initElements(driver, this);
         driver().get(url());

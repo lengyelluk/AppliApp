@@ -28,7 +28,7 @@ public class AppliChartPage extends Page {
 
 
     public AppliChartPage(WebDriver driver) {
-        super("AppliChartPage", "https://demo.applitools.com/hackathonChart.html", driver);
+        super("AppliChartPage", "https://demo.applitools.com/hackathonChartV2.html", driver);
         PageFactory.initElements(driver, this);
         driver().get(url());
 

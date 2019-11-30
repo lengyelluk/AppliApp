@@ -24,7 +24,7 @@ public class AppliAppWithAddsPage extends Page {
 
 
     public AppliAppWithAddsPage(WebDriver driver) {
-        super("AppliAppWithAddsPage", "https://demo.applitools.com/hackathonApp.html?showAd=true", driver);
+        super("AppliAppWithAddsPage", "https://demo.applitools.com/hackathonAppV2.html?showAd=true", driver);
 
         PageFactory.initElements(driver, this);
         driver().get(url());
