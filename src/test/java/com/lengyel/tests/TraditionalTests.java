@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -28,7 +29,7 @@ public class TraditionalTests {
     }
 
     //1 test Login Page UI Elements
-    @Test
+    @Test(priority = 1)
     public void checkLoginPage () {
         appliLoginPage = new AppliLoginPage(driver);
         appliLoginPage.checkInitialLoginPage();
@@ -36,17 +37,25 @@ public class TraditionalTests {
     }
 
     //2 data-driver test
-    @Test
+    @Test(priority = 2)
     public void dataDrivenTest () {
         appliLoginPage = new AppliLoginPage(driver);
+
         appliLoginPage.loginInvalid("", "");
+        appliLoginPage.refreshPage();
+
         appliLoginPage.loginInvalid("validUserName", "");
+        appliLoginPage.refreshPage();
+
         appliLoginPage.loginInvalid("", "validPassword");
+        appliLoginPage.refreshPage();
+
         appliLoginPage.loginValid("validUserName", "validPassword");
         AssertActions.checkForVerificationErrors();
     }
 
     //3 table sort test
+    @Test(priority = 3)
     public void sortTest() {
         appliLoginPage = new AppliLoginPage(driver);
         appliAppPage = appliLoginPage.loginValid("validUserName", "validPassword");
@@ -55,17 +64,19 @@ public class TraditionalTests {
     }
 
     //4 canvas chart test
-    @Test
+    //silly test - did not have time to find out how to automate canvas
+    @Test(priority = 4)
     public void canvasChartTest() {
         appliLoginPage = new AppliLoginPage(driver);
         appliAppPage = appliLoginPage.loginValid("validUserName", "validPassword");
         appliChartPage = appliAppPage.goToCompareExpenses();
         appliChartPage.checkChartData2017_2018();
         appliChartPage.goToChartData2019();
+        appliChartPage.checkData2019();
         AssertActions.checkForVerificationErrors();
     }
 
-    @Test
+    @Test(priority = 5)
     public void dynamicContentTest() {
         int numOfAddsToBeFound = 2;
 
@@ -78,6 +89,8 @@ public class TraditionalTests {
 
     @AfterTest
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
+
+
 }

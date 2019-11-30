@@ -104,25 +104,27 @@ public class AppliLoginPage extends Page {
         assertActions().verifyTrue(loginFailedMsgDisplayed, "Login failed msg not displayed");
 
         if(loginFailedMsgDisplayed) {
-            final String LOGIN_FAILED_MSG = "Both Username and Password must be present";
+            final String LOGIN_FAILED_MSG = "Please enter both username and password";
             final String PASSWORD_MISSING_MSG = "Password must be present";
             final String USERNAME_MISSING_MSG = "Username must be present";
 
             String msgText = loginFailedMsg.getText().trim();
 
             if (username.isBlank() && password.isBlank())
-                assertActions().verifyTrue(LOGIN_FAILED_MSG.equals(msgText), "Error message text is incorrect");
+                assertActions().verifyEquals(msgText, LOGIN_FAILED_MSG, "Error message text is incorrect");
             else if (username.isBlank())
-                assertActions().verifyTrue(USERNAME_MISSING_MSG.equals(msgText), "Error message when username is missing is incorrect");
+                assertActions().verifyEquals(msgText, USERNAME_MISSING_MSG, "Error message when username is missing is incorrect");
             else
-                assertActions().verifyTrue(PASSWORD_MISSING_MSG.equals(msgText), "Error message when password is missing is incorrect");
+                assertActions().verifyEquals(msgText, PASSWORD_MISSING_MSG, "Error message when password is missing is incorrect");
 
             //based on V2 => invalid style of error msg
             final String ERROR_MSG_STYLE = "display: block;";
             String errorMsgStyleCaptured = loginFailedMsg.getAttribute("style");
             assertActions() .verifyTrue(errorMsgStyleCaptured.equals(ERROR_MSG_STYLE), "The style of error message is incorrect");
         }
+    }
 
+    public void refreshPage() {
         driver().navigate().refresh();
     }
 
@@ -131,7 +133,9 @@ public class AppliLoginPage extends Page {
 
         String headerTextCaptured = loginFormHeader.getText().trim();
 
-        assertActions().verifyTrue(HEADER_TEXT.equals(headerTextCaptured), "Login form header text incorrect");
+        logger.info("Checking header text of Login form");
+        assertActions().verifyEquals(headerTextCaptured, HEADER_TEXT, "Login form header text incorrect");
+
     }
 
     public void checkLabels() {
@@ -141,9 +145,11 @@ public class AppliLoginPage extends Page {
         String usernameLabelCaptured = usernameLabel.getText();
         String passwordLabelCaptured = passwordLabel.getText();
 
-        assertActions().verifyTrue(USERNAME_LABEL_TEXT.equals(usernameLabelCaptured), "Username label incorrect");
-        assertActions().verifyTrue(PASSWORD_LABEL_TEXT.equals(passwordLabelCaptured), "Password label incorrect");
-
+        logger.info("Checking label text of Login form");
+        assertActions().verifyEquals(usernameLabelCaptured, USERNAME_LABEL_TEXT,
+                "Username label incorrect.");
+        assertActions().verifyEquals(passwordLabelCaptured, PASSWORD_LABEL_TEXT,
+                "Password label incorrect.");
     }
 
     public void checkTextFieldsPlaceholders() {
@@ -154,8 +160,11 @@ public class AppliLoginPage extends Page {
         String usernamePlaceholderCaptured = usernameTextField.getAttribute("placeholder");
         String passwordPlaceholderCaptured = passwordTextField.getAttribute("placeholder");
 
-        assertActions().verifyTrue(USERNAME_PLACEHOLDER.equals(usernamePlaceholderCaptured), "Username placeholder incorrect");
-        assertActions().verifyTrue(PASSWORD_PLACEHOLDER.equals(passwordPlaceholderCaptured), "Password placeholder incorrect");
+        logger.info("Checking placeholders of username and password text fields");
+        assertActions().verifyEquals(usernamePlaceholderCaptured, USERNAME_PLACEHOLDER,
+                "Username placeholder incorrect.");
+        assertActions().verifyEquals(passwordPlaceholderCaptured, PASSWORD_PLACEHOLDER,
+                "Password placeholder incorrect.");
     }
 
     public void checkLoginButton() {
@@ -163,7 +172,9 @@ public class AppliLoginPage extends Page {
 
         String btnTextCaptured = loginButton.getText().trim();
 
-        assertActions().verifyTrue(LOGIN_BTN_TEXT.equals(btnTextCaptured), "Login button text incorrect");
+        logger.info("Checking Login button in Login form");
+        assertActions().verifyEquals(btnTextCaptured, LOGIN_BTN_TEXT,
+                "Login button text incorrect.");
     }
 
     public void checkSignInButton() {
@@ -180,12 +191,15 @@ public class AppliLoginPage extends Page {
         String labelTextCaptured = rememberMeLabel.getText().trim();
         String labelTextStyle = rememberMeCheckbox.getAttribute("style");
 
-        assertActions().verifyTrue(REMEMBER_ME_TEXT.equals(labelTextCaptured), "Remember me label text incorrect");
+        logger.info("Checking Remember me label in Login form");
+        assertActions().verifyEquals(labelTextCaptured, REMEMBER_ME_TEXT,
+                "Remember me label text incorrect.");
         //based on V2 to check the offset of Remember me text form the checkbox
-        assertActions().verifyTrue(StringUtils.isBlank(labelTextStyle), "The style attribute of Remember me checkbox should be empty");
+        assertActions().verifyTrue(StringUtils.isBlank(labelTextStyle), "The style attribute of Remember me checkbox should be empty.");
     }
 
     public void checkSocialIconsPresent() {
+        logger.info("Checking social icons in Login form");
         assertActions().verifyTrue(isElementPresent(facebookIcon), "Facebook icon is not present");
         assertActions().verifyTrue(isElementPresent(twitterIcon), "Twitter icon is not present");
         assertActions().verifyTrue(isElementPresent(linkedinIcon), "LinkedIn icon is not present");
@@ -193,8 +207,9 @@ public class AppliLoginPage extends Page {
 
     public void checkIconsPresent() {
 
-        assertActions().verifyTrue(isElementPresent(maleIcon), "Male icon is not present");
-        assertActions().verifyTrue(isElementPresent(fingerprintIcon), "Fingerprint icon is not present");
+        logger.info("Checking if icons next to the text fields are displayed in Login form");
+        assertActions().verifyTrue(isElementPresent(maleIcon), "Male icon is present");
+        assertActions().verifyTrue(isElementPresent(fingerprintIcon), "Fingerprint icon is present");
     }
 
 }

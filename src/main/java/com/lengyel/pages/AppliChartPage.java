@@ -44,6 +44,8 @@ public class AppliChartPage extends Page {
 
     public void goToChartData2019() { showDataForNextYearBtn.click(); }
 
+
+    //silly one, should be done by automating canvas
     public void checkChartData2017_2018() {
         waitForPageLoaded();
         Map<String, Integer> map_data_2017 = new HashMap<>();
@@ -81,8 +83,13 @@ public class AppliChartPage extends Page {
             chartData2018.put(s1, i3);
         }
 
-        assertActions().verifyTrue(map_data_2017.equals(chartData2017), "Displayed chart data for 2017 does not match with expecting values");
-        assertActions().verifyTrue(map_data_2018.equals(chartData2018), "Displayed chart data for 2018 does not match with expecting values");
+        assertActions().verifyTrue(map_data_2017.equals(chartData2017), "Displayed chart data for 2017 match with expecting values");
+        assertActions().verifyTrue(map_data_2018.equals(chartData2018), "Displayed chart data for 2018 match with expecting values");
+    }
+
+    //not automated - did not know how to automate canvas
+    public void checkData2019() {
+
     }
 
 

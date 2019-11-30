@@ -76,6 +76,23 @@ public class AssertActions {
             System.err.println("Failed");
             verificationErrors.add(e);
             checkPoints.add("[ERROR] " + message);
+            logger.error("[ERROR] " + message);
+        }
+
+    }
+
+    public void verifyEquals(int currentValue, int expectedValue, String message) {
+        logger.info("Verify for Equality: Current: " + currentValue + " against expected: " + expectedValue);
+        try {
+            verifications.assertEquals(currentValue, expectedValue, message + "\n");
+            checkPoints.add("[OK] " + message);
+            logger.error("[ERROR] " + message + " Expected: " + expectedValue + " Found: " + currentValue);
+
+        } catch (Error e) {
+            System.err.println("Failed");
+            verificationErrors.add(e);
+            checkPoints.add("[ERROR] " + message);
+            logger.error("[ERROR] " + message);
         }
 
     }
@@ -140,7 +157,7 @@ public class AssertActions {
                 checkPoints.add("[OK] " + message);
             } else {
                 checkPoints.add("[NOK] " + message);
-                logger.info("[NOK] " + message);
+                logger.error("[ERROR] " + message);
             }
             verifications.assertTrue(checkCondition, message + "\n");
         } catch (Error e) {

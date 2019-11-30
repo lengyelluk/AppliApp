@@ -99,9 +99,9 @@ public class AppliAppPage extends Page {
         List<Double> sortedTableKey = getAmountColumn();
 
         //column sorting
-        assertActions().verifyTrue(sortedTableKey.equals(checkTableKey), "The order of amounts is not ascending");
+        assertActions().verifyTrue(sortedTableKey.equals(checkTableKey), "The order of amounts is ascending");
         //integrity
-        assertActions().verifyTrue(sortedTable.equals(checkTable), "Ordering by amount column cause data integrity issues");
+        assertActions().verifyTrue(sortedTable.equals(checkTable), "Ordering by amount did not cause data integrity issues");
     }
 
     public List<Double> getAmountColumn() {

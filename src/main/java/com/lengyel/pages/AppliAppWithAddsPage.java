@@ -46,11 +46,11 @@ public class AppliAppWithAddsPage extends Page {
         int numOfAddsFound = addsImagesFound.size();
 
         //bassed on V2 - confirm num of displayed adds is correct => add should be a gif???
-        assertActions().verifyTrue(numOfAddsFound == numOfAddsToBeFound, "Number of adds is the same as expected");
+        assertActions().verifyEquals(numOfAddsFound, numOfAddsToBeFound, "Number of adds is the same as expected");
         //based on V2 - check found images are adds => containg flashSale in the name???
         for(String add : addsImagesFound) {
             if(!add.contains("flashSale")) {
-                logger.info("New add added to the page: " + add);
+                logger.error("New add added to the page: " + add);
             }
         }
     }

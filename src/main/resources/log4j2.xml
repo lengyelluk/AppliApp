@@ -12,7 +12,7 @@
     </Appenders>
     <Loggers>
         <Root level="trace">
-            <AppenderRef ref="file" level="DEBUG"/>
+            <AppenderRef ref="file" level="ERROR"/>
             <AppenderRef ref="STDOUT" level="DEBUG"/>
         </Root>
     </Loggers>

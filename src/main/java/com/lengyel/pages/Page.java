@@ -1,5 +1,6 @@
 package com.lengyel.pages;
 
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import com.lengyel.actions.AssertActions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,14 +41,14 @@ public abstract class Page {
 
     protected boolean isElementPresent(WebElement element) {
         boolean elementPresent = false;
+
         try {
             driverWait.until(ExpectedConditions.visibilityOf(element));
             elementPresent = true;
-        } catch (NoSuchElementException e){
-            logger.error(element.getTagName() + " is not present");
-        } catch (TimeoutException ex) {
-            logger.error(element.getTagName() + " not found in 2 secons");
+        } catch (Exception e) {
+
         }
+
         return elementPresent;
     }
 
