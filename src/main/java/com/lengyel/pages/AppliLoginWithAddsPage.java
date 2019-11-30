@@ -24,7 +24,7 @@ public class AppliLoginWithAddsPage extends Page {
 
 
     public AppliLoginWithAddsPage(WebDriver driver) {
-        super("AppliLoginWithAddsPage", "https://demo.applitools.com/hackathonV2.html?showAd=true", driver);
+        super("AppliLoginWithAddsPage", "https://demo.applitools.com/hackathon.html?showAd=true", driver);
         PageFactory.initElements(driver, this);
         driver().get(url());
 

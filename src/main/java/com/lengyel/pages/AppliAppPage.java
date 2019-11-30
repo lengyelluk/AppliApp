@@ -35,7 +35,7 @@ public class AppliAppPage extends Page {
     By amountValues = By.xpath("//tr/td[contains(@class, 'text-right')]/span");
 
     public AppliAppPage(WebDriver driver) {
-        super("AppliAppPage", "https://demo.applitools.com/hackathonAppV2.html", driver);
+        super("AppliAppPage", "https://demo.applitools.com/hackathonApp.html", driver);
 
         PageFactory.initElements(driver, this);
         driver().get(url());
@@ -81,7 +81,7 @@ public class AppliAppPage extends Page {
     }
 
     public void checkSorting() {
-        logger.error("Table sort test");
+        logger.info("***TEST Table sort test ***");
         Map<Double, List<String>> unsortedTable = getRows();
 
         TreeMap<Double, List<String>> checkTable = new TreeMap<>();

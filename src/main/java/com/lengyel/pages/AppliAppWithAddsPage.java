@@ -24,7 +24,7 @@ public class AppliAppWithAddsPage extends Page {
 
 
     public AppliAppWithAddsPage(WebDriver driver) {
-        super("AppliAppWithAddsPage", "https://demo.applitools.com/hackathonAppV2.html?showAd=true", driver);
+        super("AppliAppWithAddsPage", "https://demo.applitools.com/hackathonApp.html?showAd=true", driver);
 
         PageFactory.initElements(driver, this);
         driver().get(url());
@@ -42,7 +42,7 @@ public class AppliAppWithAddsPage extends Page {
 
     //only valid for App page with Adds
     public void checkAdds(int numOfAddsToBeFound) {
-        logger.error("Dynamic content test");
+        logger.info("***TEST Dynamic content test ***");
 
         List<String> addsImagesFound = findAddsImages();
         int numOfAddsFound = addsImagesFound.size();
@@ -52,7 +52,7 @@ public class AppliAppWithAddsPage extends Page {
         //based on V2 - check found images are adds => containg flashSale in the name???
         for(String add : addsImagesFound) {
             if(!add.contains("flashSale")) {
-                logger.error("New add added to the page: " + add);
+                logger.info("New add added to the page: " + add);
             }
         }
     }

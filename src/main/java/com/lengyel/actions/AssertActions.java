@@ -69,32 +69,16 @@ public class AssertActions {
 
     public void verifyEquals(String currentValue, String expectedValue, String message) {
         logger.info("Verify for Equality: Current: " + currentValue + " against expected: " + expectedValue);
-        try {
-            verifications.assertEquals(currentValue, expectedValue, message + "\n");
-            checkPoints.add("[OK] " + message);
-        } catch (Error e) {
-            System.err.println("Failed");
-            verificationErrors.add(e);
-            checkPoints.add("[ERROR] " + message);
-            logger.error("[ERROR] " + message);
-        }
-
+        //boolean and go to existing one
+        boolean condition = currentValue.equals(expectedValue);
+        verifyTrue(condition, "Verify for Equality: Current: " + currentValue + " against expected: " + expectedValue);
     }
 
     public void verifyEquals(int currentValue, int expectedValue, String message) {
-        logger.info("Verify for Equality: Current: " + currentValue + " against expected: " + expectedValue);
-        try {
-            verifications.assertEquals(currentValue, expectedValue, message + "\n");
-            checkPoints.add("[OK] " + message);
-            logger.error("[ERROR] " + message + " Expected: " + expectedValue + " Found: " + currentValue);
-
-        } catch (Error e) {
-            System.err.println("Failed");
-            verificationErrors.add(e);
-            checkPoints.add("[ERROR] " + message);
-            logger.error("[ERROR] " + message);
-        }
-
+        logger.info(message + " Verify for Equality: Current: " + currentValue + " against expected: " + expectedValue);
+        //boolean and go to existing one
+        boolean condition = currentValue == expectedValue;
+        verifyTrue(condition, message + " Verify for Equality: Current: " + currentValue + " against expected: " + expectedValue);
     }
 
     public static void checkForVerificationErrors() {

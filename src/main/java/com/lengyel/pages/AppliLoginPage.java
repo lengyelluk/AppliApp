@@ -61,7 +61,7 @@ public class AppliLoginPage extends Page {
     WebElement fingerprintIcon;
 
     public AppliLoginPage(WebDriver driver) {
-        super("AppliLoginPage", "https://demo.applitools.com/hackathonV2.html", driver);
+        super("AppliLoginPage", "https://demo.applitools.com/hackathon.html", driver);
         PageFactory.initElements(driver, this);
         driver().get(url());
 
@@ -72,7 +72,7 @@ public class AppliLoginPage extends Page {
 
 
     public void checkInitialLoginPage() {
-        logger.error("Login Page UI Elements");
+        logger.info("***TEST Login Page UI Elements Test ***");
         checkHeader();
         checkLabels();
         checkIconsPresent();
@@ -96,15 +96,15 @@ public class AppliLoginPage extends Page {
         String testType = "";
         if (username.isBlank() && password.isBlank()) {
             testType = "noNameNoPwd";
-            logger.error("Data-driven test - input: no username and no password");
+            logger.info("***TEST Data-driven test - input: no username and no password ****");
         }
         else if (username.isBlank()) {
             testType = "noName";
-            logger.error("Data-driven test - input: no username");
+            logger.info("***TEST Data-driven test - input: no username ***");
         }
         else {
             testType = "noPwd";
-            logger.error("Data-driven test - input: no password");
+            logger.info("***TEST Data-driven test - input: no password ***");
         }
 
         usernameTextField.sendKeys(username);
